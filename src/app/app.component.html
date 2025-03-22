@@ -15,9 +15,9 @@
     <h2>*ngFor</h2>
 
     <ul>
-      <li *ngFor="let item of items">
-        <ng-container *ngIf="item.name != 'Ảo'">
-          Đây là {{ item.name }} hiện nay đang {{ item.age }} tuổi
+      <li *ngFor="let student of students">
+        <ng-container *ngIf="student.name != 'Ảo'">
+          Đây là {{ student.name }} hiện nay đang {{ student.age }} tuổi
         </ng-container>
       </li>
     </ul>
@@ -69,13 +69,13 @@
         <ng-container *ngTemplateOutlet="loading"></ng-container>
       </ng-container>
 
-      
-        <ng-template #content>
-          <div class="content">
-            <p>Đây là content 1</p>
-            <button (click)="isLoading = !isLoading">Nhấn để hiển thị content 2</button>
-          </div>
-        </ng-template>
+
+      <ng-template #content>
+        <div class="content">
+          <p>Đây là content 1</p>
+          <button (click)="isLoading = !isLoading">Nhấn để hiển thị content 2</button>
+        </div>
+      </ng-template>
     </div>
   </div>
 
@@ -101,5 +101,54 @@
         </div>
       </app-child>
     </div>
+  </div>
+
+  <div>
+    <h2>*ngClass</h2>
+
+    <button (click)="isActive = !isActive">Bật/Tắt trạng thái</button>
+    <p [ngClass]="{'text-success': isActive, 'text-danger': !isActive}">
+      Trạng thái: {{ isActive ? 'Hoạt động' : 'Không hoạt động' }}
+    </p>
+
+    <ul>
+      <li *ngFor="let status of statuses" [ngClass]="getClass(status)">
+        {{ status }}
+      </li>
+    </ul>
+
+    <ul>
+      <li *ngFor="let phone of phones" [ngClass]="{'text-success': phone.category === 'iphone', 'text-danger': phone.category === 'samsung'}">
+        {{ phone.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>*ngStyle</h2>
+
+    <p [ngStyle]="{'color': isActive ? 'green' : 'red', 'font-size.px': 20}">
+      Đoạn văn có màu động
+    </p>
+  </div>
+
+  <div>
+    <h2>*ngModel</h2>
+
+    <p *ngIf="username.length < 3 && username.length > 0" style="color: red;">
+      Tên phải có ít nhất 3 ký tự!
+    </p>
+    
+    <p *ngIf="username.length >= 3">
+      Username: {{ username }}
+    </p>
+
+    <input type="text" [(ngModel)]="username" placeholder="Enter your username">
+  </div>
+
+  <div>
+    <h2>Custom Attribute Directive</h2>
+
+    <p appHighlight highlightColor="lightblue">Di chuột vào đây để thấy hiệu ứng</p>
   </div>
 </div>

@@ -37,3 +37,11 @@ li {
 .content {
     border: 1px solid black;
 }
+
+.text-success {
+    color: rgb(15, 172, 15)
+}
+
+.text-danger {
+    color: red;
+}

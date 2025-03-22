@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { NgTemplateExampleComponent } from './components/ng-template-example/ng-template-example.component';
 import { ChildComponent } from './components/ng-content/child/child.component';
 import { ParentComponent } from './components/ng-content/parent/parent.component';
+import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgTemplateExampleComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
