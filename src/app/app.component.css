@@ -1,0 +1,39 @@
+.container {
+    background-color: aliceblue;
+    font-family: sans-serif;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgb(13, 126, 88);
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    width: 150px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(7, 77, 53);
+    transform: scale(1.1);
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    border-bottom: 1px solid black;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.content {
+    border: 1px solid black;
+}
