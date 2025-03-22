@@ -21,7 +21,7 @@ Nếu bạn muốn đóng góp, hãy tạo một pull request hoặc mở issue 
 
 ### Yêu Cầu Hệ Thống
 - Node.js v16+ (Khuyến nghị dùng v18+)
-- Angular CLI 15
+- Angular CLI 15+
 - Trình duyệt như Chrome, Edge hoặc Firefox
 
 ### Cài Đặt
